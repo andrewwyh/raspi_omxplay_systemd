@@ -5,7 +5,7 @@ This service autostarts with the Raspberry Pi, and continuously and repetitively
 
 For Raspberry Pi 4, we can have independent playback on each HDMI
 
-##Installation
+## Installation
 
 Edit the omx.service file, and insert your URL into the lines:
 
@@ -26,24 +26,24 @@ ExecStart=omxplayer --display 7 rtmp://<put your stream here>
 ExecStart=omxplayer rtmp://<put your stream here>
 ```
 
-Copy the file to /lib/systemd/system
+### Copy the file to /lib/systemd/system
 ```
 cp omx.player /lib/systemd/system
 ```
 
-Enable the service
+### Enable the service
 
 ``` 
 sudo systemctl enable omx.service
 ```
 
-Start the service
+### Start the service
 
 ```
 sudo systemctl start omx.service
 ```
 
-Stop the service
+### Stop the service
 ```
 sudo systemctl stop omx.service
 ```
