@@ -9,22 +9,23 @@ For Raspberry Pi 4, we can have independent playback on each HDMI
 
 Edit the omx.service file, and insert your URL into the lines:
 
-### For Raspi 4, separate HDMI outputs
-#### HDMI 1
-```
-ExecStart=omxplayer --display 2 rtmp://<put your stream here>
-```
+#### For Raspi 4, separate HDMI outputs
+##### HDMI 1
+<code>
+  ExecStart=omxplayer --display 2 <b><i>rtmp://put your stream here</b></i>
+  </code>
 
-#### HDMI 2
-```
-ExecStart=omxplayer --display 7 rtmp://<put your stream here>
-```
+##### HDMI 2
+<code>
+  ExecStart=omxplayer --display 7 <b><i>rtmp://put your stream here</b></i>
+  </code>
+
 
 ### For other Raspi models with only 1 HDMI output:
 
-```
-ExecStart=omxplayer rtmp://<put your stream here>
-```
+<code>
+  ExecStart=omxplayer <b><i>rtmp://put your stream here</b></i>
+  </code>
 
 ### Copy the file to /lib/systemd/system
 ```
