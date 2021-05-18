@@ -1,0 +1,16 @@
+[Unit]
+Description=OMXplayer to play stream on screen
+Documentation=OMX
+After=graphical.target
+
+[Service]
+#ExecStartPre=sleep 60
+ExecStart=omxplayer rtmp://<insert your RTMP stream URL here>
+User=pi
+KillMode=process
+Restart=always
+RestartSec=10s
+
+[Install]
+WantedBy=graphical.target
+Alias=omx.service
